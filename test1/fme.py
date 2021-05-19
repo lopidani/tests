@@ -1,8 +1,7 @@
 # global variable result of multiply
 result=int()
-def fme(nr):
-    # variable p for initialize multiply of nr digits
-    p=1
+# variable p for initialize multiply of nr digits
+def fme(nr,p=1):
     # variable s for reuse functions fme argument
     s=int()
     global result
@@ -28,9 +27,9 @@ def fme(nr):
               break          
            
     if s != 0:
-       fme(s)
+       fme(s,1)
     return result
   
   if __name__=="__main__": 
      nr=292
-     print ('fme=',fme(nr))
+     print ('fme=',fme(nr,1))
